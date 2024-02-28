@@ -1,0 +1,11 @@
+.container{
+
+    
+    @include display($small){
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

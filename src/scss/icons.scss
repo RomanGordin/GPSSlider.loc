@@ -1,0 +1,47 @@
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--searck2:before {
+    content: "\e906";
+    color: #fff;
+}
+
+.icon--arrows:before {
+    content: "\e905";
+    color: #41f6d7;
+}
+
+.icon--chat:before {
+    content: "\e900";
+    color: #fff;
+}
+
+.icon--keys:before {
+    content: "\e901";
+    color: #fff;
+}
+
+.icon--person:before {
+    content: "\e902";
+    color: #fff;
+}
+
+.icon--phone:before {
+    content: "\e903";
+    color: #fff;
+}
+
+.icon--search:before {
+    content: "\e904";
+    color: #fff;
+}
