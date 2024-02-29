@@ -1,0 +1,178 @@
+.partners{
+    
+}
+.sections-header{
+    padding: 16px;
+    background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(255,255,255,1) 100%);
+
+    @include display($small){
+        padding: 16px 24px; 
+    }
+
+    &__title{
+        color: $pale-blue;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+    }
+}
+.slider{
+    padding: 0 16px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: 55;
+        right: 0;
+        width: 24px;
+        height: 72px;
+        background: linear-gradient(90deg, rgba(248,248,248,0) 0%, rgba(248,248,248,1) 100%);
+    }
+
+    @include display($medium){
+        height: max-content;
+        padding: 0 24px;
+        &::before{
+            display: none;
+        }
+    }
+
+    @include display($large){
+        padding: 0 32px; 
+    }
+
+    &-wrapper{
+        padding: 8px 0;
+
+        @include display($medium){
+            display: flex;
+            flex-wrap: wrap;
+            padding: 16px 0;
+        }
+    }
+
+    &-slide{
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 8px 16px 8px 0;
+        min-width: 240px;
+        max-height: 72px;
+        border: 1px solid $smoky-white-dark;
+        border-radius: 6px;
+
+        @include display($medium){
+            margin: 8px 24px 8px 0;
+            min-width: 224px;
+
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+        }
+
+        @include display($large){
+            margin: 8px 32px 8px 0;
+            min-width: 240px;
+            &:nth-child(3n){
+                margin-right: 32px;
+            }
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &__image{
+            object-fit: contain;
+        }
+
+        &__link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border: 2px solid $radical-red;
+            border-radius: 50%;
+            transition: opacity 0.5s;
+
+            &:hover{
+                opacity: 0.5;
+            }
+
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: calc(50% - 6px);
+                width: 2px;
+                height: 7.5px;
+                background-color: $radical-red;
+                border-radius: 2px;
+                transform: rotate(135deg);
+            }
+
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: calc(50% - 6px);
+                width: 2px;
+                height: 7.5px;
+                background-color: $radical-red;
+                border-radius: 2px;
+                transform: rotate(225deg);
+            }
+        }
+    }
+
+    &-pagination{
+        display: flex;
+        justify-content: center;
+        margin: 16px 0;
+
+        @include display($medium){
+            display: none;
+        }
+    }
+
+    &-actions{
+        display: none;
+
+        @include display($medium){
+            display: block;
+
+            button{
+                margin-left: 8px;
+                font-size: 16px;
+                font-weight: 500;
+                color: $black-and-blue;
+    
+                &::before{
+                    display: inline-block;
+                    margin-right: 16px;
+                }
+
+                &[active]{
+                    &::before{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet{
+    opacity: 1;
+    background-color: #DDDDDD;
+}
+.swiper-pagination-bullet-active{
+    opacity: 1;
+    background-color: #B5B6BC;
+}

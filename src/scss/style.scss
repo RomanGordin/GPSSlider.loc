@@ -13,12 +13,12 @@ body{
 }
 
 // library
-@import 'node_modules/swiper/swiper.scss';
+@import '/node_modules/swiper/swiper-bundle.css';
 
 // components 
 
 // blocks
-@import 'blocks/slider.scss';
+@import 'blocks/slider';
 
 
 
